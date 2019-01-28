@@ -1,0 +1,6 @@
+export const INPUT = 'input'
+export const DROPDOWN = 'dropdown'
+export const SEARCH = 'search'
+export const FILM = 'film'
+export const FILM_GROUP = 'film_group'
+export const WEB = 'web'
