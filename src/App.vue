@@ -147,7 +147,8 @@
       },
 
       fillAttribute (option) {
-        this.data = this.convertToData(option)
+        const data = this.convertToData(option)
+        this.fillData(data)
         this.listSearch[this.currentKey] = []
       },
 
@@ -197,6 +198,14 @@
             web_thumb1: option.thum1
           }
         }
+      },
+
+      fillData (data) {
+        Object.keys(data).forEach((key) => {
+          if (!this.data[key]) {
+            this.data[key] = data[key]
+          }
+        })
       },
 
       async addFilm () {
